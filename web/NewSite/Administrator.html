@@ -1,0 +1,57 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="adminstyles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="wrapper" align= "center">
+	<div id="header">
+	  <h1> Faculty Tracker </h1>
+	</div> <!--End header-->
+	<div id="nav">
+    
+    	<ul>
+        	<li><a href="index.html">Home</a></li>
+            <li>About</li>
+            <li><a href="FacultyLogin.html">Faculty Login</a></li>
+            <li><a href="ViewSchedules.html"> View Schedules</a></li>
+            </ul>
+            
+    </div> <!--End navigation-->
+    <div id="welcome">
+    	<p> Welcome <span style="color: #044D98"><?php echo $loginName; ?></span></p><br>
+        <hr>
+        <div id="description">
+        <p>We provide an effective tool that will allow  students to be able to easily determine <span style="color: #FDB00E"> when and where 
+		</span>they can meet with the  <span style="color:#FDB00E"> faculty and staff </span> of the Computer Science department at  North 	Carolina 
+		Agricultural and Technical State University. The faculty and staff are able to  <span style="color: #FDB00E"> add, modiy, and delete </span> 
+		their available hours and locations to the system.  The students can then view all of the provided  <span style="color: #FDB00E">schedules. </span></p>
+        </div><!--End description-->
+        </div> <!--End welcome statement-->
+       
+<?php
+session_start();
+//Checks to see if the user is logged into the system
+if (!isset($_SESSION['basic_is_logged_in']) 
+    || $_SESSION['basic_is_logged_in'] !== true) {
+
+	//Redirects the user to the login page
+    ob_start();
+    include("facultyLogin.html");
+    ob_flush();
+	exit;
+	
+}
+
+?>
+
+
+
+
+
+</body>
+</html>

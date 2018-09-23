@@ -1,0 +1,100 @@
+@charset "utf-8";
+body,html{
+	text-align: center;
+	margin:0;
+	padding:0;
+	background-color: rgb(40, 14, 157); /* #044D98;#001B38; aggie blue */
+	height:100%;
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	
+}
+.wrapper{
+	top: 0;
+	left: 0;
+	position:relative;
+	display: inline-block;
+	
+}
+#header{
+	position:relative;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(253, 185, 39, 0.98);
+	display: inline-block;
+}
+#header h1{
+  font-size: 48px;
+  color: rgb(0, 70, 132);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left;
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.35);
+	z-index: 6;
+}
+
+	
+	
+#nav{
+	width: 100%;
+	
+}
+
+
+/*********************Navigation*****************************/
+
+#nav ul{
+	background-color:rgb(40, 14, 157);
+	margin-top: 0px;
+}
+#nav li{
+	vertical-align: middle;
+	margin: 0px auto;
+	font-size:18px;
+	display:inline-block;
+ 	background-color: rgb(40, 14, 157); /*aggie gold */
+	height: 50px;
+	width:24.7%; 
+	
+ }
+ #nav li a{
+
+	 text-decoration: none;
+vertical-align:middle;
+  font-size: 18px;
+  color: rgba(253, 185, 39, 0.98);
+  font-weight: bold;
+  line-height: 1.2;
+ text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.35);
+  z-index: 29;
+}
+
+/**********************Welcome, Description, and HR *****************************/
+
+#welcome{
+	 width: 100%;
+	background-color:#FFFFFF; 	 
+ }
+ hr{
+	 width:80%;
+	 border:dashed;
+	 color: #044D98;
+ }
+
+ #welcome p{
+	 width: 100%;
+  font-size: 30px;
+  color: rgb(157, 161, 165);
+  font-weight: bold;
+  line-height: 1.2;
+	z-index: 8;
+}
+#description p{
+  font-size: 20px;
+  color: rgb(157, 161, 165);
+  font-weight: bold;
+  line-height: 1.2;
+  z-index: 11;
+}
+
+

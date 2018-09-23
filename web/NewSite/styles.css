@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+/**********************Body and HTML *****************************/
+body,html{
+	margin:0;
+	padding:0;
+	background-color: rgb(40, 14, 157); /* #044D98;#001B38; aggie blue */
+	height:100%;
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	
+}
+.wrapper{
+	top: 0;
+	left: 0;
+	position:relative;
+	display: inline-block;
+	
+}
+
+
+#header{
+	position:relative;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(253, 185, 39, 0.98);
+	display: inline-block;
+}
+#header h1{
+  font-size: 48px;
+  color: rgb(0, 70, 132);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left;
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.35);
+	z-index: 6;
+}
+
+	
+	
+#nav{
+	width: 100%;
+	
+}
+
+
+/*********************Navigation*****************************/
+
+#nav ul{
+	background-color:rgb(40, 14, 157);
+	margin-top: 0px;
+}
+#nav li{
+	vertical-align: middle;
+	margin: 0px auto;
+	font-size:18px;
+ 	background-color: rgb(40, 14, 157); /*aggie gold */
+ 	display: inline-block;
+	height: 50px;
+	width:24.7%; 
+ }
+ #nav li a{
+
+	 text-decoration: none;
+vertical-align:middle;
+  font-size: 18px;
+  color: rgba(253, 185, 39, 0.98);
+  font-weight: bold;
+  line-height: 1.2;
+ text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.35);
+  z-index: 29;
+}
+
+/**********************Welcome, Description, and HR *****************************/
+
+
+ #welcome{
+	 width: 100%;
+	background-color:#FFFFFF; 	 
+ }
+ hr{
+	 width:80%;
+	 border:dashed;
+	 color: #044D98;
+ }
+
+ #welcome p{
+	 width: 100%;
+  font-size: 30px;
+  color: rgb(157, 161, 165);
+  font-weight: bold;
+  line-height: 1.2;
+	z-index: 8;
+}
+#description p{
+  font-size: 20px;
+  color: rgb(157, 161, 165);
+  font-weight: bold;
+  line-height: 1.2;
+  z-index: 11;
+}
+
+
+/**********************About Box*****************************/
+ 
+#About-box {
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  height: 350px;
+  /* 280px; */
+  background-color: #FDB00E;
+	 z-index: 12;
+}
+h4{
+  font-size: 48px;
+  color: rgb(0, 70, 132);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.35);
+  z-index: 13;
+}
+#About-box p{
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  text-align: center;
+  z-index: 17;
+}
+
+
+/**********************Faculty Box*****************************/
+#Faculty-box{
+	box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color: #FDB00E;
+  height: 350px;
+  
+	z-index: 12;
+}
+
+/**********************Students Box *****************************/
+ #Faculty-box p{
+	 font-size: 24px;
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  text-align: center;
+  z-index: 17; 
+ }
+ 
+ #Students-box{
+	 box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color: #FDB00E;
+  height: 350px;
+  
+	 z-index: 12; 
+ }
+  #Students-box p{
+	 font-size: 24px;
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  text-align: center;
+  z-index: 17;   
+	  
+  }
+  
+  #info-boxes table{
+	 width: 80%;
+	 border:none;
+	 border-color: transparent;
+  }
+  #info-boxes table th{
+	 padding : 10px 50px 10px 10px;
+  }
+  
+ /**********************Footer *****************************/
+ #footer{
+  font-size: 30px;;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 1.2;
+  z-index: 10;
+}

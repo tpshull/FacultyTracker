@@ -1,0 +1,6 @@
+AuthType Basic
+AuthName "Members Only"
+AuthUserFile /var/www/clients/client2/web8/.htpasswd_stats
+<limit GET PUT POST>
+require valid-user
+</limit>

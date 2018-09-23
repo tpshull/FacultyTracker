@@ -1,0 +1,32 @@
+html,body{margin:0;padding:0}
+body{font: 76% arial,sans-serif;text-align:center}
+p{margin:0 10px 10px}
+a{padding:5px; text-decoration:none; color:#000000;}
+div#header{background-image:url(http://facultytracker.ncat.edu/AD.jpg); width:1100px}
+div#header h1{
+	height:80px;
+	line-height:80px;
+	margin:0;
+	padding-left: 2%;
+	color: #FFF;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+div#container{text-align:left; padding-right:10%;}
+div#content p{line-height:1.4}
+div#content form{padding-left:3px}
+div#navigation ul, table{margin:15px 0; padding:0; list-style-type:none;}
+div#navigation li, tr{margin-bottom:5px;}
+div#extra{background:#CCC8B3;}
+div#footer{background:#BFBD93;}
+div#footer p{margin:0;padding:5px 10px}
+div#container{width:900px;margin:0 auto}
+div#content{float:left;width:700px}	
+div#navigation{
+	float:left;
+	width:200px;
+	height:500px;
+	background-repeat:no-repeat;
+	background-image: url('http://facultytracker.ncat.edu/Navigation.jpg');
+}
+div#extra{float:right;width:500px}
+div#footer{clear:both;width:100%}

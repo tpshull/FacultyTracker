@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Faculty Home Page</title>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload="goforit()">
+<div id="container">
+<div id="header"><h1>Faculty / Staff Tracker</h1></div>
+<div id='navigation'>
+<p><h2><u>Navigation</h2></u></p>
+<form action="faculty_login.php" method="POST"> 
+  Username: <input type="text" 		name="username" size="15" />
+  <br />  
+  Password: <input type="password" 	name="password" size="15" /> 
+  <br />  
+    <p><input type="submit" value="Login" /></p> 
+</form> 
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+</div>
+ <div id='content'>
+</div>
+<h2><center>Welcome students of the Computer Science Department.</center></h2>
+<h3><center><i> This is a Faculty / Staff Tracker to make sure you are able to find anyone in the department at anytime of the day.
+
+</i></center></h3>
+<br /><br />
+
+<h3><center> Faculty at a Glance </center></h3>
+ <center>
+ <table width="653" height="328" border="2">
+  <tr>
+
+    <td><div align="center"><em>Faculty Name</em></div></td>
+    <td><div align="center"><em>Current Location</em></div></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</center>
+</p>
+<script type="text/javascript"> 
+/*
+Live Date Script- 
+Â© Dynamic Drive (www.dynamicdrive.com)
+For full source code, installation instructions, 100's more DHTML scripts, and Terms Of Use,
+visit http://www.dynamicdrive.com
+*/
+ 
+ 
+var dayarray=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+var montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+ 
+function getthedate(){
+var mydate=new Date()
+var year=mydate.getYear()
+if (year < 1000)
+year+=1900
+var day=mydate.getDay()
+var month=mydate.getMonth()
+var daym=mydate.getDate()
+if (daym<10)
+daym="0"+daym
+var hours=mydate.getHours()
+var minutes=mydate.getMinutes()
+var seconds=mydate.getSeconds()
+var dn="AM"
+if (hours>=12)
+dn="PM"
+if (hours>12){
+hours=hours-12
+}
+if (hours==0)
+hours=12
+if (minutes<=9)
+minutes="0"+minutes
+if (seconds<=9)
+seconds="0"+seconds
+//change font size here
+var cdate="<small><font color='000000' face='Arial'><b>"+dayarray[day]+", "+montharray[month]+" "+daym+", "+year+" "+hours+":"+minutes+":"+seconds+" "+dn
++"</b></font></small>"
+if (document.all)
+document.all.clock.innerHTML=cdate
+else if (document.getElementById)
+document.getElementById("clock").innerHTML=cdate
+else
+document.write(cdate)
+}
+if (!document.all&&!document.getElementById)
+getthedate()
+function goforit(){
+if (document.all||document.getElementById)
+setInterval("getthedate()",1000)
+}
+ 
+</script>
+  <span id="clock"></span>
+  
+  <! Ends the function to show the current time>
+  
+  <?php 
+//Connects to your Database 
+mysql_connect("152.8.244.196", "c2facultytracker", "Stewart2010") or die(mysql_error()); 
+mysql_select_db("c2facultytracker") or die(mysql_error());
+print "Connected to database";
+//?>
+</p>
+</div>
