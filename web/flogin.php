@@ -12,31 +12,23 @@ include('connect.php');
 $username = strtolower($_POST['username']);
 $password = strtolower($_POST['password']);
 
-//Attempt to prevent mysql injection
-mysql_real_escape_string($username);
-mysql_real_escape_string($password);
+//Attempt to prevent mysql injection <--- REMEMBER THIS CONCEPT!!!
+mysqli_real_escape_string($conn, $username);
+mysqli_real_escape_string($conn, $password);
 
-//Code to connect to the database
-$con = mysql_connect($hostname, $dbusername, $dbpassword);
-
-if (!$con)
-{
-    die('Unable to connect to MySQL' . mysql_error());
-}
+if (!$conn)
+{ die('Unable to connect to MySQL' . mysql_error()); }
 else
 {
-
-    //This selects the database
-    $selected_db = mysql_select_db($databaseName, $con);
 
     //Sample Query that get the username from the staffID that matches the username that is inputted
     $query = "SELECT * FROM staff WHERE username='$username'";
 
     //All the results of the query is stored in this variable
-    $result = mysql_query($query);
+    $result = mysqli_query($conn, $query);
 
     //This gets the information from result and puts it into an array
-    $row = mysql_fetch_array($result);
+    $row = mysqli_fetch_array($result);
 
 
 
