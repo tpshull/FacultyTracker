@@ -17,10 +17,9 @@ mysqli_real_escape_string($conn, $username);
 mysqli_real_escape_string($conn, $password);
 
 if (!$conn)
-{ die('Unable to connect to MySQL' . mysql_error()); }
+{ die('Unable to connect to MySQL' . mysqli_error($conn)); }
 else
 {
-
     //Sample Query that get the username from the staffID that matches the username that is inputted
     $query = "SELECT * FROM staff WHERE username='$username'";
 
@@ -30,8 +29,6 @@ else
     //This gets the information from result and puts it into an array
     $row = mysqli_fetch_array($result);
 
-
-
     //This validates the username and password to make sure it is in the database
 	do{
    if (isset($username) && isset($password))
@@ -40,8 +37,6 @@ else
       if ($username == $row['username'] & ($password == $row['password'] or md5($password) == $row['password']))
         {
             //If login was correct
-		
-			
             //Sets session to true
             $_SESSION['basic_is_logged_in'] = true;
             $_SESSION['staffID'] = $row['staffID'];
@@ -55,19 +50,12 @@ else
             include("Administrator.php");
             ob_flush();
             exit;
-        }
-
-        else
-        {
-
+        } else {
             //Will show 2 links to link back to the home page and login page
             include("menu.php");
             echo "<h4 style='text-align:center'>Wrong username or password </h4>";
-
         }//Ends 2nd if statement
-
     }//Ends 1st if statement
-	
 }
 while(false);
 }
@@ -80,7 +68,7 @@ while(false);
 //}
 
 //Closes the connection
-mysql_close($con);
+mysqli_close($conn);
 ?>
 
 
