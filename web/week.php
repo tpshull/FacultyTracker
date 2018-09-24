@@ -306,23 +306,23 @@ function ds_onclick(d, m, y) {
 	//The connection to the database
 	include('connect.php');
 	
-	if ($_POST['check'] != 0) {					
+/*	if ($_POST['check'] != 0) {					
 		if(isset($_POST['check'])) {
 			foreach($_POST['check'] as $eventID) {
 				mysqli_query($conn, "DELETE FROM event WHERE eventID = '$eventID'") or die(mysqli_error($conn));
 			}
 		}		
-	}
+	}*/
 		
 	function dayEvents($startDay)
 	{
 		include('connect.php');
-		if(null !== trim($_POST['When'])){
+/*		if(null !== trim($_POST['When'])){
 			$newdate = date('Y-m-d');
 		} else{	// Gets the current date
 		$newdate = $_POST['When'];
-	}
-		//$newdate = date('Y-m-d');
+	}*/
+		$newdate = date('Y-m-d');
 	  	//Time stamp
 	  	$ts = strtotime($newdate);
 	
@@ -395,34 +395,26 @@ function ds_onclick(d, m, y) {
         <td width="160" bgcolor="gold"><b><font color="navy">Friday</td>
       </tr>
       <tr align="center">
-      <?php
-	  	if("" == trim($_POST['When'])){
-    $newdate = date('Y-m-d');
-} 
-	else{	
-	  $newdate =  $_POST['When'];
-	}
-	  $date = $newdate;
-	  //$date = date('Y-m-d');
+	  
+	<?php
+//	  	if("" == trim($_POST['When'])){ $newdate = date('Y-m-d'); } 
+//		else{ $newdate =  $_POST['When']; }
+
+//	  $date = $newdate;
+	  $date = date('Y-m-d');
 	  //Time stamp
 	  $ts = strtotime($date);
 	  //Day of week
 	  $dow = date('w', $ts);
 	  $offset = $dow - 1;
 	  
-	  if ($offset<0)
-	  {
-		  $offset = 6;
-	  }
+	  if ($offset<0) { $offset = 6; }
 	  //Calculate timestamp for Monday
 	  $ts = $ts - $offset * 86400;
 	  
 	  $dayEvent = array();
 	  for($i=0; $i<5; $ts+=86400, $i++)
-	  {
-		  echo "<td height='31'>" . date('m/d/Y', $ts) . "</td>";
-	  }
-	  
+	  { echo "<td height='31'>" . date('m/d/Y', $ts) . "</td>"; }
 	  echo "</tr>";
 	  ?>
 		
